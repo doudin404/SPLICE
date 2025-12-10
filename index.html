@@ -145,7 +145,7 @@
   <div class="container">
     <h2 class="title is-3">Overview of SPLICE Pipeline</h2>
     <figure>
-      <img src="static/images/pipline.png" alt="Overview of SPLICE pipeline" />
+      <img src="static/images/pipline.png" alt="Overview of SPLICE pipeline" style="width: 100%; height: auto;" />
       <figcaption>
         <strong>Figure 1:</strong> Overview of our <strong>SPLICE</strong> pipeline. Given a 3D shape decomposed into parts, we first apply <strong>Part Feature Extraction</strong> using a shared convolutional encoder \( f_{\mathrm{enc}} \) to obtain per-part geometry latent codes \( \{\mathbf{z}_i\} \) and Gaussian proxies \( \{\mathbf{g}_i\} \). In <strong>User Editing and Diffusion-based Refinement</strong>, these proxies can be directly modified by user operations (e.g., move, scale, mix) or adjusted by a latent diffusion model \( f_{\mathrm{adj}} \) to restore global coherence. The resulting updated proxies \( \{(\mathbf{z}'_i, \mathbf{g}'_i)\} \) are then processed in <strong>Pose Feature Mixing</strong>, where each \( \mathbf{g}'_i \) is encoded by a SIREN-based pose encoder \( \phi \), and combined with \( \mathbf{z}'_i \) via a multilayer perceptron \( f_{\mathrm{MLP}} \) to obtain the final part embedding \( \mathbf{h}_i \). Finally, in <strong>Attention-based Shape Decoding</strong>, sampled query points attend to \( \{\mathbf{h}_i\} \) through a cross-attention transformer \( f_{\mathrm{dec}} \), followed by occupancy decoding to reconstruct the final shape via marching cubes.
       </figcaption>
@@ -158,7 +158,7 @@
   <div class="container">
     <h2 class="title is-3">Comparison of Copy Editing Results</h2>
     <figure>
-      <img src="static/images/op_copy.png" alt="Comparison of copy editing results" />
+      <img src="static/images/op_copy.png" alt="Comparison of copy editing results" style="width: 100%; height: auto;" />
       <figcaption>
         <strong>Figure 2:</strong> Comparison of the copy editing results between our method and SPAGHETTI.
         <!-- SPAGHETTI implements the copy operation in exactly the same way as our method. However, due to the implicit encoding of part-specific information within its representation, SPAGHETTI often fails to execute the copy operation correctly. In contrast, our method accurately inserts the copied part at the target location. -->
@@ -172,7 +172,7 @@
   <div class="container">
     <h2 class="title is-3">Comparison of Delete Editing Results</h2>
     <figure>
-      <img src="static/images/op_delete.png" alt="Comparison of delete editing results" />
+      <img src="static/images/op_delete.png" alt="Comparison of delete editing results" style="width: 100%; height: auto;" />
       <figcaption>
         <strong>Figure 3:</strong> Comparison of delete editing results between our method and SPAGHETTI. The <strong>gray</strong> parts are deleted during the editing.
         <!-- The highlighted parts in <strong>red</strong> will be left. SPAGHETTI's deletion result appears as though the target part is simply erased, often leaving gaps or incomplete sections. In contrast, our method considers the shape's integrity after part removal, ensuring the result remains a cohesive and complete shape. -->
@@ -186,7 +186,7 @@
   <div class="container">
     <h2 class="title is-3">Comparison of Move Editing Results</h2>
     <figure>
-      <img src="static/images/op_move.png" alt="Comparison of move editing results" />
+      <img src="static/images/op_move.png" alt="Comparison of move editing results" style="width: 100%; height: auto;" />
       <figcaption>
         <strong>Figure 4:</strong> Comparison of move editing results between our method and SPAGHETTI and DualSDF. Our method ensures both editing precision and the preservation of shape semantics. For example, in the second row, when the two chair legs are moved closer together, our method accurately completes the move while introducing only minor deformations to maintain a natural and plausible result.
       </figcaption>
@@ -212,7 +212,7 @@
   <div class="container">
     <h2 class="title is-3">Comparison of Scaling Editing Results</h2>
     <figure>
-      <img src="static/images/op_scale.png" alt="Comparison of scaling editing results" />
+      <img src="static/images/op_scale.png" alt="Comparison of scaling editing results" style="width: 100%; height: auto;" />
       <figcaption>
         <strong>Figure 6:</strong> Comparison of scaling editing results between our method, SPAGHETTI, and DualSDF. The <strong>yellow</strong> parts are scaled during the editing. Similar to rotation, Our method leverages a diffusion model to adjust the shape encoding, enabling effective and precise axial scaling.
       </figcaption>
@@ -225,7 +225,7 @@
   <div class="container">
     <h2 class="title is-3">Comparison of Part Mixing Results</h2>
     <figure>
-      <img src="static/images/op_mix.png" alt="Comparison of part mixing results" />
+      <img src="static/images/op_mix.png" alt="Comparison of part mixing results" style="width: 100%; height: auto;" />
       <figcaption>
         <strong>Figure 7:</strong> Comparison of part mixing results between our method and SPAGHETTI.Since our method extracts features for each part independently, mixing parts from different shapes is handled as seamlessly as mixing parts from the same shape. This enables our approach to produce high-quality and coherent results.
       </figcaption>
@@ -238,7 +238,7 @@
   <div class="container">
     <h2 class="title is-3">Editing Comparisons on Airplane Category</h2>
     <figure>
-      <img src="static/images/op_airplane-baenet.png" alt="Editing comparisons on the airplane category" />
+      <img src="static/images/op_airplane-baenet.png" alt="Editing comparisons on the airplane category" style="width: 100%; height: auto;" />
       <figcaption>
         <strong>Figure 8:</strong> Editing comparisons on the airplane category using our method, DualSDF, and SPAGHETTI. Different colors indicate different types of editing operations.
       </figcaption>
